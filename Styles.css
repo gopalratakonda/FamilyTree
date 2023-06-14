@@ -1,0 +1,21 @@
+html, body {  
+  margin: 0;
+  padding: 0;
+  background-color: rgb(25, 15, 15);
+}
+.node {
+  cursor: pointer;
+}
+
+.node circle {
+}
+
+.node text {
+  font: 25px sans-serif;
+}
+
+.link {
+  fill: none;
+  stroke: rgb(55, 68, 105);
+  stroke-width: 3px;
+}
