@@ -23,7 +23,7 @@ var treemap = d3.tree().size([height, width]);
 
 root.x0 = height / 2;
 root.y0 = 0;
-root.children.forEach(collapse);
+/*root.children.forEach(collapse);*/
 
 update(root);
 function collapse(d) {
