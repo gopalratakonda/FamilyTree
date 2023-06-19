@@ -1,7 +1,7 @@
 
 var margin = { top: 20, right: 90, bottom: 30, left: 90 },
-  width = 10060 - margin.left - margin.right,
-  height = 3000 - margin.top - margin.bottom;
+  width = 4000 - margin.left - margin.right,
+  height = 7000 - margin.top - margin.bottom;
 var svg = d3
   .select("body")
   .append("svg")
@@ -104,7 +104,7 @@ function update(source) {
       return d.parent ? 100 : 50;
     })
     .attr("height", 3)
-	.on("mouseover", function(d){return tooltip.style("visibility", "visible").style("display", "inline-block").html("Name : " + d.data.name +"</br>" +"Spouse : "+ d.data.Spouse);})
+	.on("mouseover", function(d){return tooltip.style("visibility", "visible").style("display", "inline-block").html("Name : " + d.data.Name +"</br>" +"Spouse : "+ d.data.Spouse+"</br>"+"Location : "+d.data.Location);})
     .on("mousemove", function(){return tooltip.style("top", (event.pageY-10)+"px").style("left",(event.pageX+50)+"px");})
     .on("mouseout", function(){return tooltip.style("visibility", "hidden");})
 	;
@@ -127,7 +127,7 @@ function update(source) {
       return "middle";
     })
     .text(function(d) {
-      return d.data.name;
+      return d.data.Name;
     });
 
   var nodeUpdate = nodeEnter.merge(node);
